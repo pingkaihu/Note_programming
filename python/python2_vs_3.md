@@ -20,7 +20,7 @@ However, it's easier to print multiple items (might be different types) in Pytho
     	print('a =', a)
 ```
 ```
-	a = 2
+	>>> a = 2
 ```
 ---
 ## Range
