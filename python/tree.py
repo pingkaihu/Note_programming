@@ -17,8 +17,6 @@ def pre_order(node):
         pre_order(node.left)
         pre_order(node.right)
 
-    return node
-
 
 #   The rule of pre_order is left-> root -> right
 
@@ -28,8 +26,6 @@ def in_order(node):
         in_order(node.left)
         print(node.val)
         in_order(node.right)
-
-    return node
 
 
 #   The rule of pre_order is left -> right -> root
@@ -41,9 +37,18 @@ def post_order(node):
         post_order(node.right)
         print(node.val)
 
-    return node
-
 
 # In order to realize the breadth first search, we need to have a queue
 
-#def BFS_helper(node):
+def BFS_helper(node):
+
+    queue = [node]
+
+    while queue != []:
+        node = queue.pop(0)
+        print(node.val)
+
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
