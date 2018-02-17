@@ -2,7 +2,8 @@
 
 There are some differences between Python 2 and Python 3.
 
-#### Print function
+ 
+### Print function
 
 In Python 2, the print function works like:
 ```python
@@ -19,7 +20,8 @@ However, it's easier to print multiple items in Python 3, For example,
     	print('a =', a)
 ```
 
-#### Range
+ 
+### Range
 
 In Python 2, `range()` creates a list. 
 In Python 3, `range()` has the same function in a `for` loop, but it's equivalent to `xrange()` in Python 2 in order to save memory usage.
@@ -28,7 +30,8 @@ The way to create a list by `range()` is as follow:
 	a = list(range(10))
 ```
 
-#### `int` or `float` output during division
+ 
+### Division output: `int` or `float`
 
 In Python 2, one `int` divided by another `int` always gives you an integer output. For example,
 ```python
@@ -39,4 +42,9 @@ In Python 3, it could be a `float` output:
 ```python
 	print(5/2)
     	>>> 2.5
+```
+In order to get an `int` ouput in Python3, we can use `//` operator:
+```python
+	print(5//2)
+	>>> 2
 ```
