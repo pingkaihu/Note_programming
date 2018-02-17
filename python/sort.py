@@ -15,7 +15,6 @@ def quicksort(array):
 
     return quicksort(array[:i]) + [pivot] + quicksort(array[i + 1:])
 
-
 # [Quicksort] - modified
 # We can modify the quicksort which considers the case pivot == array[k] as well
 # The performance is much better than simple quicksort if there is duplicate elements in the list
@@ -85,6 +84,35 @@ def merge_sort(array):
 #     a.append(randint(0, 1000))
 #
 # b = merge_sort(a)
+# a.sort()
+# print(a == b)
+#
+# ---------------------------------------------------------------------------------------------------
+
+# [Insertion sort]
+# Time complexity is O(N^2) (best case: O(N)). Not efficient.
+
+def insertion_sort(array):
+
+    for i in range(len(array))[1:]:
+        cur = array[i]
+        j = i-1
+        while j >= 0 and array[j] > cur:
+            array[j+1] = array[j]
+            j -= 1
+        array[j+1] = cur
+
+    return array
+
+# ---------------------------------------------------------------------------------------------------
+#
+# from random import randint
+#
+# a = []
+# for i in range(10000):
+#     a.append(randint(0, 1000))
+#
+# b = insertion_sort(a)
 # a.sort()
 # print(a == b)
 #
