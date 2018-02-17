@@ -15,7 +15,7 @@ In Python 3,
 ```
 It seems that it's more convenient to print something in Python 2, and Python 3 asks you to do extra work. 
 However, it's easier to print multiple items in Python 3, For example,
-```pyhton
+```python
 	a = 2
     	print('a =', a)
 ```
